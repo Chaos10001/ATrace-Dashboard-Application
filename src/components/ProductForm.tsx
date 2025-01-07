@@ -93,6 +93,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">Title:</label>
           <input
+            required
             type="text"
             name="title"
             value={formData.title}
@@ -103,6 +104,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">Recipient:</label>
           <input
+            required
             type="text"
             name="recipient"
             value={formData.recipient}
@@ -113,7 +115,8 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">Recipient Phone:</label>
           <input
-            type="text"
+            required
+            type="number"
             name="recipientPhone"
             value={formData.recipientPhone}
             onChange={handleInputChange}
@@ -123,6 +126,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">Description:</label>
           <input
+            required
             type="text"
             name="description"
             value={formData.description}
@@ -133,6 +137,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">Origin:</label>
           <input
+            required
             type="text"
             name="origin"
             value={formData.origin}
@@ -143,6 +148,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">Destination:</label>
           <input
+            required
             type="text"
             name="destination"
             value={formData.destination}
@@ -153,6 +159,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
         <div className="mb-2">
           <label className="block text-gray-700">ETA:</label>
           <input
+            required
             type="datetime-local"
             name="eta"
             onChange={(e) =>
@@ -169,6 +176,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
           {formData.packages.map((pkg, index) => (
             <div key={index} className="mb-2 border p-2">
               <input
+                required
                 type="text"
                 placeholder="Name"
                 value={pkg.name}
@@ -178,6 +186,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
                 className="border p-2 mr-2"
               />
               <input
+                required
                 type="number"
                 placeholder="Weight"
                 value={pkg.weight}
@@ -201,6 +210,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
                 <option value="lbs">lbs</option>
               </select>
               <input
+                required
                 type="number"
                 placeholder="Quantity"
                 value={pkg.quantity}
