@@ -76,16 +76,6 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       <ProductForm onSubmit={handleSubmit} initialData={editingProduct} />
-      {/* <ProductForm
-        initialData={editingProduct} // Pass product to edit
-        onSubmit={(product) => {
-          if (editingProduct) {
-            useStore.getState().updateProduct(editingProduct.id, product); // Update product
-          } else {
-            useStore.getState().addProduct(product); // Add new product
-          }
-        }}
-      /> */}
       <ProductTable
         products={paginatedProducts}
         onEdit={handleEdit}

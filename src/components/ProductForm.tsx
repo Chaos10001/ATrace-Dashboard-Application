@@ -89,79 +89,103 @@ const ProductForm: React.FC<ProductFormProps> = ({ onSubmit, initialData }) => {
 
   return (
     <div className="mb-4">
-      <form onSubmit={handleSubmit} className="mb-2 grid grid-cols-2 gap-4">
+      <form
+        onSubmit={handleSubmit}
+        className="mb-2 grid grid-cols-1 lg:grid-cols-2 gap-4"
+      >
         <div className="mb-2">
-          <label className="block text-gray-700">Title:</label>
+          <label htmlFor="title" className="block text-gray-700">
+            Title:
+          </label>
           <input
             required
             type="text"
             name="title"
+            id="title"
             value={formData.title}
             onChange={handleInputChange}
             className="border p-2 w-full"
           />
         </div>
         <div className="mb-2">
-          <label className="block text-gray-700">Recipient:</label>
+          <label htmlFor="recipient" className="block text-gray-700">
+            Recipient:
+          </label>
           <input
             required
             type="text"
             name="recipient"
+            id="recipient"
             value={formData.recipient}
             onChange={handleInputChange}
             className="border p-2 w-full"
           />
         </div>
         <div className="mb-2">
-          <label className="block text-gray-700">Recipient Phone:</label>
+          <label htmlFor="recipientPhone" className="block text-gray-700">
+            Recipient Phone:
+          </label>
           <input
             required
-            type="number"
+            type="text"
             name="recipientPhone"
+            id="recipientPhone"
             value={formData.recipientPhone}
             onChange={handleInputChange}
             className="border p-2 w-full"
           />
         </div>
         <div className="mb-2">
-          <label className="block text-gray-700">Description:</label>
+          <label htmlFor="description" className="block text-gray-700">
+            Description:
+          </label>
           <input
             required
             type="text"
             name="description"
+            id="description"
             value={formData.description}
             onChange={handleInputChange}
             className="border p-2 w-full"
           />
         </div>
         <div className="mb-2">
-          <label className="block text-gray-700">Origin:</label>
+          <label htmlFor="origin" className="block text-gray-700">
+            Origin:
+          </label>
           <input
             required
             type="text"
             name="origin"
+            id="origin"
             value={formData.origin}
             onChange={handleInputChange}
             className="border p-2 w-full"
           />
         </div>
         <div className="mb-2">
-          <label className="block text-gray-700">Destination:</label>
+          <label htmlFor="destination" className="block text-gray-700">
+            Destination:
+          </label>
           <input
             required
             type="text"
             name="destination"
+            id="destination"
             value={formData.destination}
             onChange={handleInputChange}
             className="border p-2 w-full"
           />
         </div>
         <div className="mb-2">
-          <label className="block text-gray-700">ETA:</label>
+          <label htmlFor="eta" className="block text-gray-700">
+            ETA:
+          </label>
           <input
             required
             type="datetime-local"
             name="eta"
+            id="eta"
             onChange={(e) =>
               setFormData({
                 ...formData,

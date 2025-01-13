@@ -55,6 +55,19 @@ This project implements a responsive dashboard application for managing products
 4. **Pagination**:
    - Implements a simple approach by slicing the `products` array based on the current page and page size.
 
+## Tests
+Tests have been written to ensure the functionality of the application. The tests cover the following aspects:
+- **Unit Tests**: Verify the correctness of individual functions and components.
+- **Integration Tests**: Ensure that different parts of the application work together as expected.
+- **End-to-End Tests**: Simulate user interactions to verify the overall functionality of the application.
+
+To run the tests, use the following command:
+```bash
+yarn test
+```
+
+Test files are located in the `__tests__` directory and follow the naming convention `*.test.tsx` for consistency.
+
 ## Assumptions
 - Products are stored locally in the state and are not fetched from an external API.
 - The application assumes the provided schema structure for products and packages.
